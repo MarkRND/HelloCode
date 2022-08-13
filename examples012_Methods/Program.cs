@@ -45,18 +45,31 @@ int Method3()
 // Console.WriteLine(year);
 
 
-// Вид4 что то принимают и что то возвращают
+// Вид 4 что то принимают и что то возвращают
 string Method4(int count, string text)
 {
-    int i = 0;
+    // int i = 0;
     string result = String.Empty;//"";  переменная result изначально будет пустой строкой
-    while (i < count)
+    for(int i = 0; i < count; i++) 
+    // while (i < count)
     {
         result = result + text;
-        i++;
+        // i++;
     }
     return result;
 }
 
 string res = Method4(10, "ПривЭт " );
 Console.WriteLine(res);
+
+
+// Класическое использование цикла в цикле
+
+for (int i = 2; i <= 10; i++)
+{
+    for (int j = 2; j <= 10; j++)
+    {
+        Console.WriteLine($"{i} x {j} = {i*j}");
+    }
+    Console.WriteLine();
+}

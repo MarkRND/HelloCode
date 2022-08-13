@@ -41,7 +41,7 @@ int IndeOf(int[] collection, int find)
 }
 
 
-int[] array =new int[10];
+int[] array = new int[10];
 
 FillArray(array);
 PrintArray(array);
