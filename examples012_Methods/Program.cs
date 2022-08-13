@@ -73,3 +73,29 @@ for (int i = 2; i <= 10; i++)
     }
     Console.WriteLine();
 }
+
+
+
+
+
+string text = "- Я думаю, - сказал князь, улыбаюсь, - что, "
+            + "ежели бы вас послали вместо нашего милого Винценгероде,"
+            + "вы бы взяли приступом согласие прусского короля.";
+
+string Replace(string text, char oldValue, char newValue)
+//   Replace - переменная  text -тест в котором что то меняем, oldValue старый символ который хотим поменять, newValue - новый символ , на который меняем.
+{
+    string result = String.Empty;
+
+    int length = text.Length;    // определяем длину строки text через Length
+    for (int i = 0; i < length; i++)
+    {
+        if (text[i] == oldValue) result = result + $"{newValue}";
+        else result = result + $"{text[i]}";
+    }
+
+    return result;
+}
+
+string newText = Replace(text, ' ', '|');
+Console.WriteLine(newText);
